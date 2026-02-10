@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Criador de Senha/scr/style/styles.css">
+    <title>Criador de Senhas</title>
+</head>
+<body>
+    <img id="logo" src="/Projetos/Criador de Senha/scr/img/logo.png" alt="logo">
+    <h1>Gerador de senhas</h1>
+        <form id="formulario" action="">
+            <div class="pass">
+                <input type="text" id="resultado">
+                <svg class="refresh bi bi-arrow-clockwise" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
+                    <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/>
+                </svg>
+                <svg class="copy bi bi-copy" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+                </svg>
+            </div>
+            <div class="checks">
+                <div class="maiuscula">
+                    <input type="checkbox" id="plus" checked>
+                    <span>Letra Maiúscula</span>
+                </div>
+                <div class="minuscula">
+                    <input type="checkbox" id="minus" checked>
+                    <span>Letra Minúscula</span>
+                </div>
+                <div class="numeros">
+                    <input type="checkbox" id="number" checked>
+                    <span>Números</span>
+                </div>
+                <div class="simbolos">
+                    <input type="checkbox" id="simbols" checked>
+                    <span>Simbolos</span>
+                </div>
+                <div class="quantidade">
+                    <input type="range" min="6" max="12" id="range" step="1" value="8" oninput="valorSelecionado.value = this.value">
+                    <output id="valorSelecionado">8</output> 
+                </div>
+                <div class="button">
+                    <input type="submit" value="Gerar" id="imput">
+                </div>
+                <span id="successMsg" style="display: none; margin-top: 10px;">Senha copiada!</span>
+                <span id="erroMsg" style="display: none; margin-top: 10px;" >Selecione um campo</span>
+            </div>
+        </form>
+        
+    <script src="./Criador de Senha/scr/script/script.js"></script>
+</body>
+</html>
